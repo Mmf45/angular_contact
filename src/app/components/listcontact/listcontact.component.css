@@ -1,0 +1,92 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% de la hauteur de la vue */
+  margin: 0;
+  background-color: burlywood;
+
+}
+
+.container {
+  flex: 1; /* La partie principale s'étend sur toute la hauteur disponible */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 3px;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+tr, td {
+  border: solid black 1px;
+}
+
+table {
+  border-spacing: 1px;
+  margin-top: 40px;
+}
+
+tr:nth-child(odd) {
+  background-color: beige;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+tr:nth-child(5n + 1) {
+  color: red;
+}
+
+tr:nth-child(5n + 2) {
+  color: green;
+}
+
+tr:nth-child(5n + 3) {
+  color: brown;
+}
+
+tr:nth-child(5n + 4) {
+  color: black;
+}
+
+tr:nth-child(5n + 5) {
+  color: blue;
+}
+
+td:nth-child(1) {
+  text-align: center;
+  color: blue;
+}
+
+tr:first-child td:first-child {
+  border-left: none;
+  border-top: none;
+}
+/* listcontact.component.css */
+
+.custom-form-container {
+  text-align: center;
+}
+
+.custom-form-container form {
+  display: inline-block;
+  text-align: left;
+  width: 30%; /* Ajuste la largeur  */
+}
+
+.custom-form-container h2 {
+  margin-bottom: 20px; /* Ajuste la marge  */
+}

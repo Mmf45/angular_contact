@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12 bg-warning text-center">Ajouter Contact</div>
+  </div>
+  <form #ajoutForm="ngForm">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" [(ngModel)]="nouveauContact.nom" name="nom" required>
+    <small class="text-danger" *ngIf="ajoutForm.controls['nom'] && ajoutForm.controls['nom'].hasError('required')">
+      Le nom est requis.
+    </small>
+
+    <label for="prenom">Prénom:</label>
+    <input type="text" id="prenom" [(ngModel)]="nouveauContact.prenom" name="prenom" required>
+    <small class="text-danger" *ngIf="ajoutForm.controls['prenom'] && ajoutForm.controls['prenom'].hasError('required')">
+      Le prénom est requis.
+    </small>
+
+    <label for="telephone">Numéro de téléphone:</label>
+    <input type="text" id="telephone" [(ngModel)]="nouveauContact.telephone" name="telephone" required pattern="[0-9]*">
+    <small class="text-danger" *ngIf="ajoutForm.controls['telephone'] && ajoutForm.controls['telephone'].hasError('required')">
+      Le numéro de téléphone est requis.
+    </small>
+    <small class="text-danger" *ngIf="ajoutForm.controls['telephone'] && ajoutForm.controls['telephone'].hasError('pattern')">
+      Le numéro de téléphone doit contenir uniquement des chiffres.
+    </small>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="nouveauContact.email" name="email" required>
+    <small class="text-danger" *ngIf="ajoutForm.controls['email'] && ajoutForm.controls['email'].hasError('required')">
+      L'email est requis.
+    </small>
+    <button *ngIf="!selectedContact" (click)="ajouterContact()" [disabled]="ajoutForm.invalid">Ajouter</button>
+    <button *ngIf="selectedContact" (click)="modifierContact()" [disabled]="ajoutForm.invalid">Modifier</button>
+  </form>
+</div>
+  <div class="container">
+    <footer class="bg-dark text-white p-3 text-center">
+    <div class="row">
+      <div class="col-md-6">
+        <p>Contactez-nous : contact@votreentreprise.com | Tél : +123 456 789</p>
+      </div>
+      <div class="col-md-6">
+        <p>&copy; 2024 Entreprise. Tous droits réservés.</p>
+        <p><a >Politique de confidentialité</a></p>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+        <a  target="_blank"><i class="fab fa-facebook"></i></a>
+        <a  target="_blank"><i class="fab fa-twitter"></i></a>
+        <a  target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    </footer>
+  </div>
+</body>
+</html>

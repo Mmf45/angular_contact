@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "id": "27be",
+      "nom": "Ba",
+      "prenom": "Saliou",
+      "telephone": "777777777",
+      "email": "test@gmail.com"
+    },
+    {
+      "id": "6485",
+      "nom": "Diop",
+      "prenom": "Astou",
+      "telephone": "772503865",
+      "email": "xksjo@gmail.com"
+    },
+    {
+      "id": "afb9",
+      "nom": "Thiam",
+      "prenom": "Baba",
+      "telephone": "775552012",
+      "email": "abc@gmail.com"
+    },
+    {
+      "id": "c8cc",
+      "nom": "Diallo",
+      "prenom": "Thierno",
+      "telephone": "775972230",
+      "email": "mail@gmail.com"
+    }
+  ]
+}
